@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Capture de Zone",
+    "version": "1.0",
+    "description": "Capture une zone sélectionnée de la page web et la sauvegarde en PNG",
+    "permissions": ["activeTab", "storage", "notifications"],
+    "options_page": "options.html",
+    "action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+    },
+    "host_permissions": ["<all_urls>"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "icons": {
+      "48": "icon.png"
+    }
+  }

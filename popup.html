@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Capture</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 10px;
+      padding: 10px;
+      background-color: #f9f9f9;
+    }
+    #capture {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      margin: 10px 0;
+      border: none;
+      cursor: pointer;
+    }
+    #capture:hover {
+      background-color: #45a049;
+    }
+    #response-container, #image-container {
+      margin-top: 20px;
+    }
+    #api-response {
+      padding: 10px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      min-height: 50px;
+    }
+    #last-captured-image {
+      max-width: 100%;
+      height: auto;
+    }
+    #copy-text {
+      background-color: #008CBA;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      display: block;
+      margin-top: 10px;
+    }
+    #copy-text:hover {
+      background-color: #007B9E;
+    }
+  </style>
+</head>
+<body>
+  <h1>Capture</h1>
+  <button id="capture">Capture</button>
+  <div id="response-container">
+    <p id="api-response"></p>
+    <button id="copy-text">Copy text</button>
+  </div>
+  <div id="image-container">
+    <img id="last-captured-image" src="" style="max-width: 100px;">
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
